@@ -203,33 +203,20 @@
 .phone-controls {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 22px;
   touch-action: manipulation;
 }
 
 .d-pad {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.d-pad > button {
-  width: 70px;
-  height: 60px;
-}
-
-.d-pad > div {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
 }
 
 .d-pad > button,
-.d-pad > div button {
-  width: 70px;
-  height: 60px;
+.d-pad div button {
+  width: 64px;
+  height: 58px;
+
+  margin: 3px;
 
   border: none;
   border-radius: 10px;
@@ -237,7 +224,7 @@
   background: #111;
   color: #aaa;
 
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
 
   cursor: pointer;
@@ -246,6 +233,7 @@
 
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+
   touch-action: manipulation;
 }
 
@@ -736,27 +724,4 @@
     font-size: 25px;
   }
 
-}
-@media (max-width: 600px) {
-
-  .phone-controls {
-    margin-top: 25px;
-    padding: 0 5px;
-  }
-
-  .d-pad {
-    width: 100%;
-  }
-
-  .d-pad > button,
-  .d-pad > div button {
-    width: 72px;
-    height: 62px;
-
-    font-size: 24px;
-  }
-
-  .d-pad > div {
-    width: 100%;
-  }
 }
