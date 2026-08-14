@@ -202,42 +202,43 @@
 
 .phone-controls {
   display: flex;
-
   justify-content: center;
-
-  margin-top: 35px;
+  margin-top: 22px;
+  touch-action: manipulation;
 }
 
 .d-pad {
   text-align: center;
 }
 
-.d-pad button {
-  width: 48px;
+.d-pad > button,
+.d-pad div button {
+  width: 64px;
+  height: 58px;
 
-  height: 38px;
-
-  margin: 2px;
+  margin: 3px;
 
   border: none;
-
-  border-radius: 6px;
+  border-radius: 10px;
 
   background: #111;
-
   color: #aaa;
 
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: bold;
 
   cursor: pointer;
 
-  box-shadow:
-    0 3px 0 #000;
+  box-shadow: 0 4px 0 #000;
+
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+
+  touch-action: manipulation;
 }
 
 .d-pad button:active {
-  transform: translateY(2px);
-
+  transform: translateY(4px);
   box-shadow: none;
 }
 
@@ -704,4 +705,23 @@
   .phone-label {
     display: none;
   }
+}
+@media (max-width: 600px) {
+
+  .phone-controls {
+    margin-top: 25px;
+  }
+
+  .d-pad > button,
+  .d-pad div button {
+    width: 78px;
+    height: 65px;
+
+    margin: 4px;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+  }
+
 }
